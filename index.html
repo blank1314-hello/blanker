@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Links</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0a0a08; --surface: #141410; --border: #2a2a22;
+    --accent: #c8f060; --text: #e8e8d8; --muted: #666655; --card-hover: #1c1c16;
+  }
+  body { background: var(--bg); color: var(--text); font-family: 'DM Mono', monospace; min-height: 100vh; overflow-x: hidden; }
+  .container { max-width: 680px; margin: 0 auto; padding: 60px 24px 100px; }
+  header { margin-bottom: 64px; animation: fadeUp 0.8s ease both; }
+  .tag { display: inline-block; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); padding: 3px 10px; border-radius: 2px; margin-bottom: 20px; }
+  h1 { font-family: 'Playfair Display', serif; font-size: clamp(42px, 8vw, 72px); font-weight: 900; line-height: 1.0; letter-spacing: -2px; margin-bottom: 16px; }
+  h1 span { color: var(--accent); }
+  .subtitle { font-size: 12px; color: var(--muted); letter-spacing: 0.1em; }
+  .divider { width: 40px; height: 1px; background: var(--accent); margin: 24px 0; opacity: 0.6; }
+  .section { margin-bottom: 48px; animation: fadeUp 0.8s ease both; }
+  .section-label { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  .links-list { display: flex; flex-direction: column; gap: 2px; }
+  .link-card { display: flex; align-items: center; gap: 16px; padding: 18px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; text-decoration: none; color: var(--text); transition: all 0.2s ease; position: relative; overflow: hidden; }
+  .link-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--accent); transform: scaleY(0); transition: transform 0.2s ease; }
+  .link-card:hover { background: var(--card-hover); border-color: #3a3a2a; transform: translateX(4px); }
+  .link-card:hover::before { transform: scaleY(1); }
+  .link-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; background: var(--bg); border: 1px solid var(--border); }
+  .link-info { flex: 1; min-width: 0; }
+  .link-title { font-size: 13px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 2px; }
+  .link-url { font-size: 10px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .link-arrow { font-size: 12px; color: var(--muted); transition: color 0.2s, transform 0.2s; flex-shrink: 0; }
+  .link-card:hover .link-arrow { color: var(--accent); transform: translateX(3px); }
+  .stats { display: flex; gap: 24px; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border); }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--accent); line-height: 1; }
+  .stat-label { font-size: 9px; color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase; }
+  footer { margin-top: 64px; font-size: 10px; color: var(--muted); letter-spacing: 0.1em; text-align: center; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="tag">✦ Links</div>
+    <h1>My<br><span>Links</span></h1>
+    <div class="divider"></div>
+    <p class="subtitle">// 자주 사용하는 링크 모음</p>
+  </header>
+
+  <div class="section">
+    <div class="section-label">소셜 미디어</div>
+    <div class="links-list">
+      <a class="link-card" href="https://instagram.com" target="_blank">
+        <div class="link-icon">📸</div>
+        <div class="link-info"><div class="link-title">Instagram</div><div class="link-url">instagram.com</div></div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a class="link-card" href="https://youtube.com" target="_blank">
+        <div class="link-icon">▶️</div>
+        <div class="link-info"><div class="link-title">YouTube</div><div class="link-url">youtube.com</div></div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a class="link-card" href="https://twitter.com" target="_blank">
+        <div class="link-icon">𝕏</div>
+        <div class="link-info"><div class="link-title">X (Twitter)</div><div class="link-url">twitter.com</div></div>
+        <span class="link-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">생산성 도구</div>
+    <div class="links-list">
+      <a class="link-card" href="https://notion.so" target="_blank">
+        <div class="link-icon">📓</div>
+        <div class="link-info"><div class="link-title">Notion</div><div class="link-url">notion.so</div></div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a class="link-card" href="https://figma.com" target="_blank">
+        <div class="link-icon">🎨</div>
+        <div class="link-info"><div class="link-title">Figma</div><div class="link-url">figma.com</div></div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a class="link-card" href="https://github.com" target="_blank">
+        <div class="link-icon">⌨️</div>
+        <div class="link-info"><div class="link-title">GitHub</div><div class="link-url">github.com</div></div>
+        <span class="link-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">AI 도구</div>
+    <div class="links-list">
+      <a class="link-card" href="https://claude.ai" target="_blank">
+        <div class="link-icon">🤖</div>
+        <div class="link-info"><div class="link-title">Claude</div><div class="link-url">claude.ai</div></div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a class="link-card" href="https://chat.openai.com" target="_blank">
+        <div class="link-icon">💬</div>
+        <div class="link-info"><div class="link-title">ChatGPT</div><div class="link-url">chat.openai.com</div></div>
+        <span class="link-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-num" id="cnt">8</div><div class="stat-label">링크 수</div></div>
+    <div class="stat"><div class="stat-num">3</div><div class="stat-label">카테고리</div></div>
+  </div>
+  <footer>항상 같은 링크 · 전 세계 어디서나</footer>
+</div>
+<script>document.getElementById('cnt').textContent = document.querySelectorAll('.link-card').length;</script>
+</body>
+</html>
